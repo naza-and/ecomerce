@@ -14,5 +14,6 @@ if($method == "OPTIONS") {
 //respuesta en forma de JSON
 echo json_encode(['nombre'=> 'Gaston', 'apellido'=>'ferreyra']);
 
+<?php require_once('conexion.php'); ?>
 
 ?>
