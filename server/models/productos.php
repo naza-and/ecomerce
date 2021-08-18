@@ -1,19 +1,9 @@
 <?php
-function mostrar_productos() {
-    return json_encode([
-        [
-         
-            "nombre"=> "Coca cola", 
-            "precio" => 180, 
-            "cantidad"=>10
-            
-        ],
-        [
-            "nombre"=> "La Gotita", 
-            "precio" => 150, 
-            "cantidad"=>5 
-        ]
-    ]    
-    );
 
+function mostrar_productos() {
+    include("conexion.php");
+    $query = $conexion->query("select descripcion from productos");
+    $resultado = $query->fetch_all(1);
+    return $resultado;
 }
+
