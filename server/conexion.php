@@ -6,5 +6,5 @@ $hostname_conexion = "localhost";
 $database_conexion = "ecomerce";
 $username_conexion = "root";
 $password_conexion = "";
-$conexion = mysql_pconnect($hostname_conexion, $username_conexion, $password_conexion) or trigger_error(mysql_error(),E_USER_ERROR); 
+$conexion = new mysqli($hostname_conexion, $username_conexion, $password_conexion, $database_conexion) or trigger_error(mysql_error(),E_USER_ERROR); 
 ?>
