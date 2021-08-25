@@ -1,51 +1,45 @@
-.top{
-    display: flex;
-    flex-direction: row;
-    
-    width: 100%;
+
+.logo-top{
+    width: 50px;
     height: 50px;
-    color: floralwhite;
-    background-color: rgb(32, 32, 32);
 }
-.logo{
-    width: 35px;
-    height: 35px;
-    position: relative;
-    float: left;
-    margin-right: 230px;
-}
-.logo2{
-    width: 35px;
-    height: 35px;
-    position: relative;
-    float: right;
-    margin-right: 40px;
-}
-.top ul li {
-    list-style-type: none;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-}
-.top ul li::after{
-content: "";
-height: 100%;
-width: 260px;
-}
-.top ul{
-    display: flex;
-    flex-direction: row;
-}
+
 .datos{
     display: flex;
     justify-content: center;
-    color: floralwhite;
+    margin-top: 10px;
+    
 }
-.datos1{
+.subimg{
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    width: 200px;
+    height: 150px;
 }
 .body{
-    background-color: rgb(18, 18, 18);
+    background-color:beige;
+}
+.card{
+    display: flex;
+    margin-top: 40px;
+    min-width: 250px;
+
+}
+.card-deck{
+    display: flex;
+    justify-content: center;
+    margin-top: 40;
+    margin-left: 40px;
+    margin-right: 40px;
+    flex-flow:row wrap ;
+}
+.card-img-top{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    object-fit: contain;
+}
+.card-title{
+    display: flex;
+    justify-content: center;
 }
