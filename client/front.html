@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+ <link rel="stylesheet" href="./css/bootstrap.min.css">
+ <script src="./js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="./css/front.css">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Los Juegos Capitales</title>
     <script>
       document.addEventListener("DOMContentLoaded", function (event) {
         const button = document.querySelector(".button");
@@ -31,18 +34,109 @@
         };
       });
     </script>
+      <!--Este es el top del menu-->
+      <!--Aca empieza-->
+      <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
+        <!--Este es el logo-->
+        <a class="navbar-brand" href="./client/front.html"><img class="logo-top" src="F:\xampp\htdocs\ecomerce\imgs\GGameslogo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <!--Estos son los botones-->
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="#">Menu<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Noticias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#">Juegos</a>
+            </li>
+            <!--Esto es un boton desplegable-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Categorias
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="www.google.com">Accion</a>
+                <a class="dropdown-item" href="www.google.com">Aventura</a>
+                <a class="dropdown-item" href="www.google.com">Clasicos</a>
+                <a class="dropdown-item" href="www.google.com">Familia</a>                
+                <a class="dropdown-item" href="www.google.com">Terror</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="www.google.com">Algo mas...</a>
+              </div>
+            </li>
+          </ul>
+         <!--Esto es un buscador-->
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+          </form>
+        </div>
+      </nav>
+  <!--Aca termina el top-->
   </head>
-  <body>
-<<<<<<< HEAD
+
+  <body class="body">
+    <div class="d-flex justify-content-center">
+      <img class="subimg" src="F:\xampp\htdocs\ecomerce\imgs\logobody.png">
+      <img class="datos" src="F:\xampp\htdocs\ecomerce\imgs\logobody.png">
+      <img class="subimg" src="F:\xampp\htdocs\ecomerce\imgs\logobody.png">
+    </div>
     
-    <center><p><h1>//Gnza Chngo Nza Nco //</h1></p></center>
-    <center><p>Nuestra pagina web</p></center>
-    <button  type="button" class="button">Retrieve data from api</button>
-=======
-    <center><p><h1>//Gnza Chango Nza Nco //</h1></p></center>
-    <center><p>Nuestra pagina web</p></center>
-    <center> <a href="www.google.com"><button type="button" class="button">LO PIBE</button></a></center>
->>>>>>> fd7a8a5c90b84b3e2ef3fd056286af0de4b013d9
-    <div id="datos"></div>
-  </body> 
+    <!--Estas son las tarjetas-->
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="F:\xampp\htdocs\ecomerce\imgs\menu.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Zelda: Ocarine of Time</h5>
+          <p class="card-text">Blablablablablablablablablablablablablablablabla.</p>
+          <p class="card-text">$29,99</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Mas Informacion</small>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="F:\xampp\htdocs\ecomerce\imgs\descarga.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">God of War</h5>
+          <p class="card-text">Blablablablablablablablablablablablablablablabla.</p>
+          <p class="card-text">$29,99</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Mas Informacion</small>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="F:\xampp\htdocs\ecomerce\imgs\menu.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Outlast</h5>
+          <p class="card-text">Blablablablablablablablablablablablablablablabla.</p>
+          <p class="card-text">$29,99</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Mas Informacion</small>
+        </div>
+      </div>
+        <div class="card">
+          <img class="card-img-top" src="F:\xampp\htdocs\ecomerce\imgs\menu.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Tetris</h5>
+            <p class="card-text">Blablablablablablablablablablablablablablablabla.</p>
+            <p class="card-text">$29,99</p>
+          </div>
+                  <div class="card-footer">
+          <small class="text-muted">Mas Informacion</small>
+        </div>
+    </div >
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body> 
+
 </html>
