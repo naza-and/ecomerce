@@ -7,31 +7,76 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Los Juegos Capitales</title>
+    <title>GGames</title>
     <script>
+      
+      const retrieveData = () => {
+          fetch(
+            "http://localhost/ecomerce/server/productos",
+            {
+              headers: { "Content-Type": "application/json" },
+            }
+          )
+          .then((res) => res.json())
+          .then((data) => {
+              console.log(data);
+              // data = data[0];
+              console.log(data);
+              const divDatos = document.getElementById("card-deck");
+
+            //   <h5 class="card-title">Zelda: Ocarine of Time</h5>
+            //   <p class="card-text">Blablablablablablablablablablablablablablablabla.</p>
+            //   <p class="card-text">$29,99</p>
+            // </div>
+            // <div class="card-footer">
+            //   <small class="text-muted">Mas Informacion</small>
+            // </div>
+            // </div>
+              data.map((producto => {
+                //DECLARO LA EL DIV CARD
+                const div = document.createElement("div");
+                div.className += "card"; 
+                //CREO LA IMAGEN DE LA CARD
+                const img = document.createElement("img");
+                img.src = producto.imagen;
+                img.className = "card-img-top";
+                //creo la card body
+                const divbody = document.createElement("div");
+                divbody.className += "card-body"; 
+                //CREO EL TITULO DE LA CARD
+                const titulo= document.createElement("h5");
+                titulo.innerText=producto.nombre
+                titulo.className += "card-title"; 
+                //Creo el texto de la card
+                const p= document.createElement("p");
+                p.className += "card-text"; 
+                p.innerText=producto.nombre;
+                // Creo el footer de la card
+                const divfooter = document.createElement("div");
+                divbody.className += "card-footer"; 
+                // creo el small del card
+                const small= document.createElement("small");
+                small.className += "text-muted";
+                small.innerText="mas informacion";
+                div.appendChild(img);
+                div.appendChild(divbody);
+                div.appendChild(titulo);
+                div.appendChild(p);
+                div.appendChild(divfooter);
+                div.appendChild(small);
+                divDatos.appendChild(div);
+
+              }))
+            });
+        };
       document.addEventListener("DOMContentLoaded", function (event) {
+        retrieveData();
         const button = document.querySelector(".button");
         button.addEventListener("click", () => {
           retrieveData();
         });
         //Las peticiones se hacen a la uri del server segun las rutas definidas
-        const retrieveData = () => {
-          fetch(
-            "http://localhost/proyectos/7mo/boilerplate_front_back/server/productos",
-            {
-              headers: { "Content-Type": "application/json" },
-            }
-          )
-            .then((res) => res.json())
-            .then((data) => {
-              console.log(data);
-              data = data[1];
-              const datos = document.createElement("div");
-              datos.innerText = "Producto: " + data.nombre + "\nCantidad: " + data.cantidad + "\nPrecio:" + data.precio;
-              const div = document.getElementById("datos");
-              div.appendChild(datos);
-            });
-        };
+        
       });
     </script>
       <!--Este es el top del menu-->
@@ -89,18 +134,8 @@
     </div>
     
     <!--Estas son las tarjetas-->
-    <div class="card-deck">
-      <div class="card">
-        <img class="card-img-top" src="F:\xampp\htdocs\ecomerce\imgs\menu.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Zelda: Ocarine of Time</h5>
-          <p class="card-text">Blablablablablablablablablablablablablablablabla.</p>
-          <p class="card-text">$29,99</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Mas Informacion</small>
-        </div>
-      </div>
+    <div class="card-deck" id="card-deck">
+      
       <div class="card">
         <img class="card-img-top" src="F:\xampp\htdocs\ecomerce\imgs\descarga.png" alt="Card image cap">
         <div class="card-body">
