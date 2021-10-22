@@ -2,16 +2,7 @@
 
 function mostrar_productos() {
     include("conexion.php");
-    $query = $conexion->query("select descripcion from productos");
-    $resultado = $query->fetch_all(1);
-    return $resultado;
-}
-//consulta de categorias de juego
-
-function mostrar_categorias() {
-    $query = $conexion->query("select productos.nombre,productos.descripcion, productos.precio, productos.cantidad  
-    from productos
-    inner join categoria on categoria.id = id_categorias WHERE categoria.nombre=´aventura´");
+    $query = $conexion->query("select *, categorias.nombre AS categoria , productos.nombre AS nombrep from productos inner join categorias on productos.id_categorias = categorias.id ");
     $resultado = $query->fetch_all(1);
     return $resultado;
 }
