@@ -1,0 +1,48 @@
+.logo-top{
+    width: 50px;
+    height: 50px;
+}
+.nav-item{
+    margin-left: 60px;
+}
+.btn{
+    margin-left: 1px;
+}
+.menubar{
+    width: 40px;
+    height: 40px;
+}
+
+.carrito{
+    width: 60px;
+    height: 50px;
+    margin-left: 30px;
+}
+.body{
+    background-color:beige;
+}
+.seccion{
+    margin-top: 20px;
+}
+.Copyright{
+    display:flex;
+    justify-content:center;
+    background-color: rgb(19, 18, 18);
+    margin-top: 20px;
+    width: 100%;
+}
+.pie{
+    margin-top: 20px;
+    color: gray;
+}
+@media screen and (max-width:800px) {
+    .subimg{
+        display: none;
+    }
+
+}
+@media screen and (max-width:1045px) {
+    .btn{
+        display: none;
+    }
+}

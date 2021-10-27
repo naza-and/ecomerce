@@ -13,66 +13,35 @@
     width: 40px;
     height: 40px;
 }
-
 .carrito{
     width: 60px;
     height: 50px;
     margin-left: 30px;
 }
 .datos{
+    width: 360px;
+    height: 130px;
     display: flex;
     justify-content: center;
-    margin: 20px 50px;
+    margin-top:10px;
 }
 .subimg{
     display: flex;
     justify-content: center;
-    width: 200px;
-    height: 150px;
+    width: 160px;
+    height: 70px;
     margin-top: 50px;
-}
-.notice{
-    margin-right: 20px;
-    width: 500px;
-    height: 300px;
-}
-
-.carousel-caption{
-    background-color: rgba(53, 51, 51, 0.8) ;
-    border-radius: .25rem
-}
-.row {
-    margin: 0px 0px ;
 }
 .body{
     background-color:beige;
 }
-.card{
-    display: flex;
-    margin-top: 40px;
-    min-width: 250px;
-
+.list-group{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
-.card-deck{
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    flex-flow:row wrap ;
-}
-.card-img-top{
-    display: flex;
-    justify-content: center;
-    object-fit: contain;
-    height: 300px;
-    margin-top: 20px;
-}
-.card-title{
-    display: flex;
-    justify-content: center;
-}
-.card-text-price{
-    display: flex;
-    justify-content: center;
+.list-group-item{
+    margin-top: 10px;
 }
 .Copyright{
     display:flex;
@@ -86,10 +55,9 @@
     color: gray;
 }
 @media screen and (max-width:800px) {
-    .subimg{
+    .noticias{
         display: none;
     }
-
 }
 @media screen and (max-width:1045px) {
     .btn{
